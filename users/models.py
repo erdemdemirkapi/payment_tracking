@@ -6,8 +6,8 @@ class CustomUser(AbstractUser):
     first_name = models.CharField(max_length = 150)
     last_name = models.CharField(max_length = 150)
     password = models.CharField(max_length = 100)
-    balance = JSONField(default = dict)
-    is_superuser = models.BooleanField()
+    balance = JSONField(null = True)
+    is_superuser = models.BooleanField(default = False)
     created_date = models.DateTimeField(auto_now_add = True)
     iban = models.CharField(max_length = 50, null = True)
     
