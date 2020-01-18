@@ -9,6 +9,7 @@ class CustomUser(AbstractUser):
     balance = JSONField(default = dict)
     is_superuser = models.BooleanField()
     created_date = models.DateTimeField(auto_now_add = True)
+    iban = models.CharField(max_length = 50, null = True)
     
     def __str__(self):
         return self.email
