@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'api',
+    'transactions',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
