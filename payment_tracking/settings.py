@@ -92,14 +92,25 @@ WSGI_APPLICATION = 'payment_tracking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'payment_tracking',
+#         'USER': 'payment_tracking_user',
+#         'PASSWORD': 'payment_tracking',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'payment_tracking',
-        'USER': 'payment_tracking_user',
-        'PASSWORD': 'payment_tracking',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd4clve0aqobgfa',
+        'USER': 'ofykvtjrywoutj',
+        'PASSWORD': '243cb977c54c6058b4d3566ba77059334e84243c8310daa4cc76a4b6b05e00e3',
+        'HOST': 'ec2-79-125-2-142.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
