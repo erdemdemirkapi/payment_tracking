@@ -7,8 +7,8 @@ from payment_tracking.settings import EMAIL_HOST_USER
 from users import models
 
 class Mails(APIView):
-    def post(self, request, *args, **kwargs):
-        username = self.request.data.get('username')
+    def get(self, request):
+        username = self.request.query_params.get('username')
         user = models.CustomUser.objects.get(username = username)
         email_to = user.email
         
@@ -19,7 +19,6 @@ class Mails(APIView):
             [email_to],
             fail_silently=False,
         )
-
         if is_success:
             response = {'data': 'success'}
         else:
