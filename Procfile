@@ -1,1 +1,1 @@
-web: gunicorn tax_calculation.wsgi --log-file=-
+web: gunicorn payment_tracking.wsgi --log-file=-
