@@ -8,5 +8,5 @@ urlpatterns = [
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('transactions/', include('transactions.urls')),
     path('transactions/', include('transactions.urls')),
-    path('send-mail/', Mails.as_view(), name='mails'
+    path('send-mail/', Mails.as_view(), name='mails'),
 ]

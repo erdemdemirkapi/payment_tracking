@@ -12,7 +12,6 @@ class UserListView(generics.ListCreateAPIView):
 
     def put(self, request, pk, format=None):
         user = models.CustomUser.objects.get(pk = pk)
-        print(user.username)
         request.data['username'] = user.username
         request.data['password'] = user.password
         serializer = UserSerializer(user, data = request.data)
